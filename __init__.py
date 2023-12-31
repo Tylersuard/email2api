@@ -42,11 +42,3 @@ def send(send_to, message, subject):
     url = email_to_url(send_to)
 
     return try_different_api_key_labels(url, data, api_key, parsed_subject)
-
-# Usage example
-if __name__ == "__main__":
-    send_to = "data@example.com"
-    subject = "api_key: 123456"
-    message = "mom’s birthday: June 6, mom’s name: Gladys"
-    response = send(send_to, message, subject)
-    print(response)
